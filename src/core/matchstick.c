@@ -5,7 +5,7 @@
 ** Login   <raphael.goulmot@epitech.net>
 ** 
 ** Started on  Tue Feb 21 19:00:07 2017 Raphaël Goulmot
-** Last update Sun Feb 26 02:47:58 2017 Raphaël Goulmot
+** Last update Sun Feb 26 02:50:10 2017 Raphaël Goulmot
 */
 
 #include "utils.h"
@@ -43,8 +43,8 @@ char	play_game(t_world *world)
       else
 	winner = 2;
     }
-  my_putstr(winner == 1 ? "You lost, too bad...\n"
-	: "I lost... snif... but I'll get you next time!!\n");
+  my_putstr(winner == 1 ? "I lost... snif... but I'll get you next time!!\n"
+	: "You lost, too bad...\n");
   return (winner);
 }
 
