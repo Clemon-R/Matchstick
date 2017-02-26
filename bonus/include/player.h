@@ -5,7 +5,7 @@
 ** Login   <raphael.goulmot@epitech.net>
 ** 
 ** Started on  Tue Feb 21 19:37:30 2017 Raphaël Goulmot
-** Last update Sun Feb 26 22:08:04 2017 Raphaël Goulmot
+** Last update Sun Feb 26 21:58:09 2017 Raphaël Goulmot
 */
 
 #ifndef PLAYER_H_

@@ -5,7 +5,7 @@
 ** Login   <raphael.goulmot@epitech.net>
 ** 
 ** Started on  Tue Feb 21 19:36:34 2017 Raphaël Goulmot
-** Last update Sun Feb 26 22:08:22 2017 Raphaël Goulmot
+** Last update Sun Feb 26 21:57:41 2017 Raphaël Goulmot
 */
 
 #include "utils.h"
@@ -71,6 +71,7 @@ void	player_turn(t_world *world)
 
   line = 0;
   stick = 0;
+  my_putstr("\033[34m");
   my_putstr("\nYour turn:\n");
   while (line <= 0 || stick <= 0)
     {
@@ -86,4 +87,5 @@ void	player_turn(t_world *world)
     }
   remove_stick(1, line, stick, world);
   display_map(world);
+   my_putstr("\033[0m");
 }
