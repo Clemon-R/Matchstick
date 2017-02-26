@@ -5,7 +5,7 @@
 ** Login   <raphael.goulmot@epitech.net>
 ** 
 ** Started on  Tue Feb 21 20:44:36 2017 Raphaël Goulmot
-** Last update Tue Feb 21 21:36:56 2017 Raphaël Goulmot
+** Last update Thu Feb 23 14:01:12 2017 Raphaël Goulmot
 */
 
 #include "player.h"
@@ -51,7 +51,7 @@ void	check_stick(t_world *world, int *line, int *stick)
 
   total = get_total(world);
   t_line = get_line(world, *line);
-  if (total == t_line && world->matches <= total)
+  if (total == t_line && total <= world->matches)
     *stick = total < world->matches ? total - 1 : world->matches - 1;
   else if (total == t_line && total - world->matches == 1)
     *stick = world->matches;

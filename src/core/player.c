@@ -5,7 +5,7 @@
 ** Login   <raphael.goulmot@epitech.net>
 ** 
 ** Started on  Tue Feb 21 19:36:34 2017 Raphaël Goulmot
-** Last update Tue Feb 21 21:21:58 2017 Raphaël Goulmot
+** Last update Sun Feb 26 02:29:55 2017 Raphaël Goulmot
 */
 
 #include "utils.h"
@@ -50,7 +50,7 @@ void	remove_stick(char p, int line, int stick, t_world *world)
     my_putstr("Player");
   else
     my_putstr("AI");
-  my_putstr("u removed ");
+  my_putstr(" removed ");
   my_put_nbr(stick);
   my_putstr(" match(es) from line ");
   my_put_nbr(line);
