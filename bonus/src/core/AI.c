@@ -5,7 +5,7 @@
 ** Login   <raphael.goulmot@epitech.net>
 ** 
 ** Started on  Tue Feb 21 20:44:36 2017 Raphaël Goulmot
-** Last update Sun Feb 26 21:54:45 2017 Raphaël Goulmot
+** Last update Sun Feb 26 22:10:51 2017 Raphaël Goulmot
 */
 
 #include "player.h"
@@ -79,6 +79,6 @@ void	AI_turn(t_world *world)
   stick = get_random(1, size > world->matches ? world->matches : size);
   check_stick(world, &line, &stick);
   remove_stick(0, line, stick, world);
-  display_map(world);
   my_putstr("\033[0m");
+  display_map(world);
 }

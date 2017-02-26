@@ -5,7 +5,7 @@
 ** Login   <raphael.goulmot@epitech.net>
 ** 
 ** Started on  Tue Feb 21 19:36:34 2017 Raphaël Goulmot
-** Last update Sun Feb 26 21:57:41 2017 Raphaël Goulmot
+** Last update Sun Feb 26 22:10:37 2017 Raphaël Goulmot
 */
 
 #include "utils.h"
@@ -86,6 +86,6 @@ void	player_turn(t_world *world)
 	}
     }
   remove_stick(1, line, stick, world);
+  my_putstr("\033[0m");
   display_map(world);
-   my_putstr("\033[0m");
 }
