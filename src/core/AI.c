@@ -5,7 +5,7 @@
 ** Login   <raphael.goulmot@epitech.net>
 ** 
 ** Started on  Tue Feb 21 20:44:36 2017 Raphaël Goulmot
-** Last update Thu Feb 23 14:01:12 2017 Raphaël Goulmot
+** Last update Sun Feb 26 02:31:51 2017 Raphaël Goulmot
 */
 
 #include "player.h"
@@ -61,7 +61,7 @@ void	check_stick(t_world *world, int *line, int *stick)
     *stick = 1;
   *stick = *stick <= 0 ? 1 : *stick;
 }
-  
+
 void	AI_turn(t_world *world)
 {
   int	line;

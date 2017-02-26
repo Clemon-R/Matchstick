@@ -5,7 +5,7 @@
 ** Login   <raphael.goulmot@epitech.net>
 ** 
 ** Started on  Tue Feb 21 19:00:07 2017 Raphaël Goulmot
-** Last update Tue Feb 21 21:24:09 2017 Raphaël Goulmot
+** Last update Sun Feb 26 02:32:07 2017 Raphaël Goulmot
 */
 
 #include "utils.h"
@@ -50,7 +50,7 @@ char	play_game(t_world *world)
 char	matchstick(int arg1, int arg2)
 {
   t_world	world;
-  
+
   if (arg1 <= 0 || arg2 <= 0)
     {
       my_putstr_err("ERROR : Only number above 0 !\n");
