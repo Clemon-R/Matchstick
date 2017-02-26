@@ -5,7 +5,7 @@
 ** Login   <raphael.goulmot@epitech.net>
 ** 
 ** Started on  Tue Feb 21 20:44:36 2017 Raphaël Goulmot
-** Last update Sun Feb 26 02:31:51 2017 Raphaël Goulmot
+** Last update Sun Feb 26 02:48:13 2017 Raphaël Goulmot
 */
 
 #include "player.h"
@@ -28,19 +28,16 @@ int	get_total(t_world *world)
   count = 0;
   y = 0;
   while (world->map[y++] && !(x = 0))
-    while (world->map[y - 1][x++])
-      count++;
+    while (world->map[y - 1][x++] && ++count);
   return (count);
 }
 
 int	get_line(t_world *world, int line)
 {
-  int	x;
   int	count;
 
   count = 0;
-  while (world->map[line - 1][x++])
-    count++;
+  while (world->map[line - 1][count] && ++count);
   return (count);
 }
 
@@ -51,13 +48,14 @@ void	check_stick(t_world *world, int *line, int *stick)
 
   total = get_total(world);
   t_line = get_line(world, *line);
-  if (total == t_line && total <= world->matches)
-    *stick = total < world->matches ? total - 1 : world->matches - 1;
+  if (total == t_line && t_line <= world->matches)
+    *stick = (t_line < world->matches ? t_line : world->matches) - 1;
   else if (total == t_line && total - world->matches == 1)
     *stick = world->matches;
   else if (total - t_line == 1 && t_line <= world->matches)
     *stick = t_line;
-  else if (total == t_line && total - world->matches <= world->matches)
+  else if (total == t_line && total > world->matches
+	   && total - world->matches <= world->matches)
     *stick = 1;
   *stick = *stick <= 0 ? 1 : *stick;
 }
